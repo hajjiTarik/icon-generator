@@ -8,13 +8,14 @@
     "html2canvas": "^0.5.0-beta4",
     "jquery": "^3.2.1",
     "jquery-ui-browserify": "^1.11.0-pre-seelio",
-    "prop-types": "^15.5.10",
-    "react": "^15.6.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.0",
     "react-color": "^2.12.1",
-    "react-dom": "^15.6.1",
+    "react-dom": "^16.5.0",
     "react-redux": "^5.0.5",
     "redux": "^3.6.0",
-    "redux-saga": "^0.15.6"
+    "redux-saga": "^0.15.6",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "babel": "^6.23.0",
@@ -51,7 +52,9 @@
     "build": "npm run clean & NODE_ENV=production  webpack -p",
     "clean": "rimraf ./build/*",
     "lint": "eslint .",
-    "lint:fix": "eslint --fix src lib"
+    "lint:fix": "eslint --fix src lib",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -62,5 +65,6 @@
   "bugs": {
     "url": "https://github.com/codex49/icon-generator/issues"
   },
-  "homepage": "https://github.com/codex49/icon-generator#readme"
+  "homepage": "https://github.com/codex49/icon-generator#readme",
+  "snyk": true
 }
